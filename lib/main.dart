@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'core/const/padding.dart';
-import 'views/dog_detail_view.dart';
-import 'views/dogs_card_view.dart';
-import 'views/dogs_landing_page.dart';
+import 'views/landing_page.dart';
 
 void main() {
-  runApp(DogsCard());
+  runApp(const DogsCard());
 }
 
 class DogsCard extends StatelessWidget {
@@ -15,21 +12,49 @@ class DogsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String MainTitle = 'Dogs Card';
+    String mainTitle = 'Dogs Card';
     return MaterialApp(
       //metarial app projede bir tane olur
-      title: (MainTitle), //uygulamayı arkaya aldığında bu gözükür
+      title: (mainTitle), //uygulamayı arkaya aldığında bu gözükür
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
               indicatorColor: Colors.black, //kontrol et
-              primarySwatch: Colors.deepPurple,
-              backgroundColor: Colors.deepPurple)
+              primarySwatch: Colors.blue,
+              backgroundColor: Colors.purple)
           .copyWith(
-              appBarTheme: const AppBarTheme(
-        centerTitle: true,
-        systemOverlayStyle: SystemUiOverlayStyle.light,
-      )),
-      home: const DogsLandingView(),
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+          systemOverlayStyle: SystemUiOverlayStyle.light,
+        ),
+      ),
+      home: const LandingView(),
     );
   }
 }
+
+
+// LandingView, Eğer kullanıcı landingView'i görmüşse bir kere, o ekrandan giderken yada o ekranı gördüğü gibi
+// local cache (shared_preferences'da) ilk kez görüldüğüne dair bilgiyi güncellememiz lazım
+// ondan sonra kullanıcı tekrardan uygulamaya girdiği zaman, uygulama landing page'demi yoksa homeview'dam mi başlayacak 
+// ona karar vereceğiz
+
+
+
+// yapının nasıl gözüktüğünü (padding, ekrandaki yer,) gibi özellikler dışarıdan belirlenmeli
+
+
+
+
+// ADVANCED Köpek detayını gidilirken Hero Widget'ı kullanılacak 
+
+
+
+
+
+
+
+
+
+
+
+
