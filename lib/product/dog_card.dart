@@ -1,11 +1,14 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:dog_cards_informations_app/views/dog_detail_view.dart';
 import 'package:flutter/material.dart';
+import 'package:dog_cards_informations_app/product/dog_model.dart';
+import 'package:dog_cards_informations_app/views/dog_detail_view.dart';
 
-import 'package:dog_cards_informations_app/product/dogs.dart';
-
-class CardExample extends StatelessWidget {
-  const CardExample({super.key});
+class DogCard extends StatelessWidget {
+  const DogCard({
+    Key? key,
+    required this.dog,
+  }) : super(key: key);
+  final Dog dog;
 
 //margin ve padding farkını oku
   @override
@@ -32,34 +35,34 @@ class CardExample extends StatelessWidget {
               ),
               Padding(
                 padding: ConstantPadding.paddingBottomLarge,
-                child: Text(Dogs().Labrador.name),
+                child: Text(dog.name),
               ),
-              const Expanded(
+              Expanded(
                   child: Padding(
                 padding: ConstantPadding.paddingBottomLarge,
-                child: Placeholder(),
+                child: Image.network(dog.path),
               )),
               //expended kelimesini not
 
               Row(
-                children: const [
+                children: [
                   DogCardBottomText(
-                    intelligent: "asd",
+                    intelligent: dog.lifeTime,
                   ),
-                  DogCardBottomText(intelligent: "asd"),
+                  DogCardBottomText(intelligent: dog.origin),
                 ],
               ),
               Row(
-                children: const [
-                  DogCardBottomText(intelligent: "asd"),
-                  DogCardBottomText(intelligent: "asd"),
+                children: [
+                  DogCardBottomText(intelligent: dog.size),
+                  DogCardBottomText(intelligent: dog.weight),
                 ],
               ),
               ElevatedButton(
                 onPressed: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) {
-                    return const DogDetailView();
+                    return DogDetailView(dog: dog);
                   }));
                 },
                 child: Text('Detaylar'),
@@ -86,7 +89,7 @@ class DogCardBottomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(4.0),
+      padding: const EdgeInsets.all(4.0),
       child: Text(
         intelligent,
         textAlign: TextAlign.start,

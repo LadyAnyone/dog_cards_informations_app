@@ -1,3 +1,5 @@
+import 'package:dog_cards_informations_app/core/const/String.dart';
+import 'package:dog_cards_informations_app/core/const/padding.dart';
 import 'package:dog_cards_informations_app/views/dogs_card_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,31 +16,25 @@ class DogsLandingView extends StatelessWidget {
         elevation: 0,
       ),
       body: Padding(
-        padding: const EdgeInsets.only(right: 20),
+        padding: ProjectPadding.projectLargeOnlyRightPadding,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                  height: 300,
-                  width: 800,
-                  child: Image.network(
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8UNAADWz_IHO1u30mJfrXOgH6EXYwyUhztQ&usqp=CAU',
-                    fit: BoxFit.contain,
-                  )),
+              padding: ProjectPadding.projectSmallAllPadding,
+              child: const LandingSizedBox(),
             ),
-            Text("Köpek Türlerini Öğren",
+            Text(ProjectStrings.projectHeadline,
                 style: Theme.of(context)
                     .textTheme
                     .headline5
                     ?.copyWith(fontWeight: FontWeight.w700, fontSize: 30),
                 textAlign: TextAlign.center),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 75) +
-                  EdgeInsets.symmetric(vertical: 20),
+              padding: ProjectPadding.projectLargeHorizontalPadding +
+                  ProjectPadding.projectLargeVerticalPadding,
               child: Text(
-                'Köpek türlerini hemen öğrenmek için devam et.',
+                ProjectStrings.bodyText,
                 style: Theme.of(context)
                     .textTheme
                     .bodyText2
@@ -53,12 +49,14 @@ class DogsLandingView extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) {
-                        return DogsCardView();
+                        return const DogsCardView(
+                          dogs: [],
+                        );
                       },
                     ));
                   },
                   child: Text(
-                    'Devam et!',
+                    ProjectStrings.landingElevatedButtonText,
                     textAlign: TextAlign.center,
                   ),
                   style: ElevatedButtonTheme.of(context).style),
@@ -67,5 +65,22 @@ class DogsLandingView extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class LandingSizedBox extends StatelessWidget {
+  const LandingSizedBox({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+        height: 300,
+        width: 800,
+        child: Image.network(
+          'https://blog.petibom.com/wp-content/uploads/2021/10/yavru-sari-siyah-labrador-retriever-irki.jpg',
+          fit: BoxFit.contain,
+        ));
   }
 }

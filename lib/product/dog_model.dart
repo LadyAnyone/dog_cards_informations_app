@@ -1,25 +1,23 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-class DogModel {
+class Dog {
   final String name;
   final String lifeTime;
   final String origin;
-  final String barkLevel;
-  final String obedienceLevel;
-  final String intelligence;
   final String size;
   final String weight;
+  final String path;
+  final String detail;
 
-  DogModel(
-    //required ekle
-    this.name,
-    this.lifeTime,
-    this.origin,
-    this.barkLevel,
-    this.obedienceLevel,
-    this.intelligence,
-    this.size,
-    this.weight,
-  );
-}
+  Dog({
+    required this.name,
+    required this.lifeTime,
+    required this.origin,
+    required this.size,
+    required this.weight,
+    required this.path,
+    required this.detail,
+  });
 
 //builder
+
+}
