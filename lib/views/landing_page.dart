@@ -1,3 +1,5 @@
+import 'package:dog_cards_informations_app/core/const/image_url.dart';
+import 'package:dog_cards_informations_app/core/const/media_quary.dart';
 import 'package:dog_cards_informations_app/core/const/string.dart';
 import 'package:dog_cards_informations_app/core/const/padding.dart';
 import 'package:dog_cards_informations_app/views/dogs_card_view.dart';
@@ -28,30 +30,30 @@ class LandingView extends StatelessWidget {
             Padding(
               padding: ProjectPadding.projectSmallAllPadding,
               child: SizedBox(
-                height: MediaQuery.of(context).size.height * 0.25,
+                height: MediaQuery.of(context).size.height *
+                    ProjectMediaQuary.mediumMediaQuarySize,
                 width: double.infinity,
                 child: Image.network(
-                  'https://blog.petibom.com/wp-content/uploads/2021/10/yavru-sari-siyah-labrador-retriever-irki.jpg',
+                  ProjectImageUrl.landingImageUrl,
                   fit: BoxFit.contain,
                 ),
               ),
             ),
             Text(ProjectStrings.projectLandingTitle,
-                style: Theme.of(context).textTheme.headline5?.copyWith(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 30,
-                    ),
+                style: Theme.of(context).textTheme.titleLarge
+                ,
                 textAlign: TextAlign.center),
             Padding(
-              padding: ProjectPadding.projectLargeHorizontalPadding + ProjectPadding.projectLargeVerticalPadding,
+              padding: ProjectPadding.projectLargeHorizontalPadding +
+                  ProjectPadding.projectLargeVerticalPadding,
               child: Text(
                 ProjectStrings.landingViewExplanation,
-                style: Theme.of(context).textTheme.bodyText2?.copyWith(fontWeight: FontWeight.w500, fontSize: 20),
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
             ),
             SizedBox(
-              height: 50,
-              width: 200,
+              height: ProjectMediaQuary.largeMediaQuarySize,
+              width: ProjectMediaQuary.xLargeMediaQuarySize,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(

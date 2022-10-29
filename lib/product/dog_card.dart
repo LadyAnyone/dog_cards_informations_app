@@ -1,4 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:dog_cards_informations_app/core/const/string.dart';
+import 'package:dog_cards_informations_app/core/const/media_quary.dart';
+import 'package:dog_cards_informations_app/core/const/padding.dart';
 import 'package:flutter/material.dart';
 import 'package:dog_cards_informations_app/models/dog_model.dart';
 import 'package:dog_cards_informations_app/views/dog_detail_view.dart';
@@ -15,24 +18,28 @@ class DogCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        padding: ConstantPadding.paddingAllLarge,
+        padding: ProjectPadding.projectLargeAllPadding,
         decoration: BoxDecoration(
           //color: Theme.of(context).backgroundColor,
-          border: Border.all(
-            color: Colors.pink, //dışardan al
-            width: 1,
-          ),
+          border: Border.all(),
         ),
         child: Column(
           children: [
             Padding(
-              padding: ConstantPadding.paddingBottomLarge,
-              child: Text(dog.name),
+              padding: ProjectPadding.projectLargeOnlyBottomPadding,
+              child: Text(
+                dog.name,
+                style: Theme.of(context).textTheme.headline5,
+              ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.3,
-              width: MediaQuery.of(context).size.width * 0.45,
-              child: Image.network(dog.pictureURL),
+              height: MediaQuery.of(context).size.height *
+                  ProjectMediaQuary.minMediaQuarySize,
+              width: MediaQuery.of(context).size.width *
+                  ProjectMediaQuary.mediumMediaQuarySize,
+              child: Image.network(
+                dog.pictureURL,
+              ),
             ),
             ElevatedButton(
               onPressed: () {
@@ -47,16 +54,11 @@ class DogCard extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 shape: const RoundedRectangleBorder(),
               ),
-              child: const Text('Details'),
+              child: Text(ProjectStrings.dogCardDetailButton),
             )
           ],
         ),
       ),
     );
   }
-}
-
-class ConstantPadding {
-  static const paddingAllLarge = EdgeInsets.all(30.0);
-  static const paddingBottomLarge = EdgeInsets.only(bottom: 30.0);
 }

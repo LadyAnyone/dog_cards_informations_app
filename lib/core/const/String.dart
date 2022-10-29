@@ -1,6 +1,10 @@
+
+
 class ProjectStrings {
-  static String title = ' Köpek Kartları';
-  static String projectLandingTitle = 'Köpek Türlerini Öğren';
-  static String landingViewExplanation = 'Köpek türlerini hemen öğrenmek için devam et.';
-  static String landingElevatedButtonText = 'Devam et bro!';
+  static String title = 'Dog Cards';
+  static String projectLandingTitle = 'Learn Dog Breeds';
+  static String landingViewExplanation =
+      'Continue to learn about dog breeds now.';
+  static String landingElevatedButtonText = 'Keep going!';
+  static String dogCardDetailButton = 'Detail';
 }

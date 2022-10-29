@@ -1,7 +1,7 @@
+import 'package:dog_cards_informations_app/core/const/image_url.dart';
 import 'package:dog_cards_informations_app/models/dog_model.dart';
 import 'package:dog_cards_informations_app/models/range.dart';
 
-// localization dosyası ???????????????????????
 class DogsConstants {
   final List<Dog> dogs = [
     Dog(
@@ -10,27 +10,27 @@ class DogsConstants {
         originCountry: 'Kanada',
         heightRange: Range(min: 54, max: 66),
         weightRange: Range(min: 24, max: 36),
-        pictureURL: 'https://blog.petibom.com/wp-content/uploads/2021/10/yavru-sari-siyah-labrador-retriever-irki.jpg',
+        pictureURL: ProjectImageUrl.labrodorImageUrl,
         detail:
-            'Labrador Retriever ılımlı davranışlar gösteren hareketlerinde aşırıya kaçmayan bir köpektir. Cana yakın, akıllı, tatlı mizaçlı, atletik yapılıdır. Oldukça büyük kemiklere, kare şeklinde vücuda, geniş kafa yapısına, uzun boyna ve güçlü çeneye sahiptir. Geniş ve güçlü çenesi onun Kanada Kazları gibi büyük av kuşlarını rahatlıkla taşımanı sağlar. Ağır, iri vücudunu taşıyan güçlü sağlam bacaklara sahiptir. Perdeli ayakları karada güçlü koşmasına yardımcı olurken, suda da kolaylıkla yüzmesini sağlamaktadır. Kısa, düz ve yumuşak astarı ile çift katmanlı kürkü Labrador köpeğinin her türlü hava koşulunda, soğuk buzlu sularda bile korunmasına yardımcı olur. Labrador Retriever zekâsı, tatlı yapısı ve çalışkan bir köpek oluşuyla her dönemde popüler ırklar arasında yer almayı başarmıştır.'),
+            'The Labrador Retriever is a dog that does not exaggerate in its movements, showing moderate behavior. He is friendly, smart, sweet-tempered, athletic. It has rather large bones, a square-shaped body, a broad head, a long neck and a strong jaw. Its wide and strong jaw allows it to easily carry large game birds such as Canada Geese. It has strong sturdy legs that support its heavy, bulky body. Its webbed feet help it run powerfully on land, while allowing it to swim easily in water. Its short, straight and soft undercoat and double-layered fur help protect the Labrador dog in all weather conditions, even in cold icy waters. The Labrador Retriever has managed to be among the popular breeds in every period with its intelligence, sweet nature and being a hardworking dog.'),
     Dog(
-        name: 'Golden',
+        name: 'Golden Retriever',
         lifeTimeRange: Range(min: 10, max: 13),
         originCountry: 'İngiltere',
         heightRange: Range(min: 52, max: 61),
         weightRange: Range(min: 25, max: 34),
-        pictureURL: 'https://blog.petibom.com/wp-content/uploads/2021/09/Yavru-golden-retriever.jpg',
+        pictureURL: ProjectImageUrl.goldenImageUrl,
         detail:
-            'Golden Retriever bulunduğu ortamda sevimliliği, cana yakınlığı ve oyunculuğu ile tüm gözleri üzerine çekmektedir. Orta büyüklüğe sahip bu sevimli ırk, açık kahverengi ve krem tonlarındaki yumuşak ve göz alıcı bedeniyle kalpleri kazanır. Atletik, ve güçlü bir yapısı vardır. Güçlü ön ve arka ayakları ile karada olduğu gibi suda da hareket etme, avlanma yeteneğine sahiptir. Düz veya dalgalı kabarık kürke sahiptir. Dost canlısı olan Golden Retriever kısa sürede ailenizden birisi olur. Akıllı ve komutları uygulayabilen bir cins oldukları için eğitim süreci gösterilen düzene bağlı olarak kısa sürede tamamlanabilir. Aile üyeleri ile zaman geçirmekten hoşlanırlar ve sahibini memnun etmeye istekli tavırlar sergilerler. Golden Retriever ırkı sevilmeye ve sevgilerini göstermeye bayılır.'),
+            'The Golden Retriever attracts all eyes with its cuteness, friendliness and playfulness in its environment. This cute medium-sized breed wins hearts with its soft and eye-catching body in light brown and cream tones. He is athletic and has a strong build. With its strong fore and hind legs, it has the ability to move and hunt in water as well as on land. It has smooth or wavy fluffy fur. The friendly Golden Retriever quickly becomes a member of your family. Because they are intelligent and can execute commands, the training process can be completed in a short time depending on the layout shown. They enjoy spending time with family members and are eager to please their owner. The Golden Retriever breed loves to be petted and shown their love.'),
     Dog(
-        name: 'Sibiryi Kurdu',
-        lifeTimeRange: Range(min: 11, max: 15),
-        originCountry: 'Sibirya',
-        heightRange: Range(min: 50, max: 60),
-        weightRange: Range(min: 15, max: 27),
-        pictureURL:
-            'https://blog.petibom.com/wp-content/uploads/2021/10/mavi-gozlu-Siberian-husky-irki-ozellikleri.jpg',
-        detail:
-            'Sibirya Kurdu, güçlü, zeki, dayanıklı ve asil duruşlu bir köpektir. Sibirya Kurdu, Siberian Husky ve Arctic Husky adlarıyla anılmaktadır. Eğlenmeyi seven ve maceracı yer yer de yaramaz yapısı ile insanların hayatında yer almıştır. Orta büyüklükte, gücü, hızı, dayanıklılığıyla çalışan kızak köpeği olarak bilinir. Çok soğuk havalarda onu koruyan bir kürk yapısı vardır. Donmuş alanlarda, buzullar üzerinde orta hızda hafif yükleri, paketleri taşırlar. Genellikle keskin yüz ifadesine sahip olsa da Sibirya Kurdu arkadaş canlısı, sevecen, ilgili ve herkesle iyi anlaşabilen bir köpektir.'),
+      name: 'Husky',
+      lifeTimeRange: Range(min: 11, max: 15),
+      originCountry: 'Sibirya',
+      heightRange: Range(min: 50, max: 60),
+      weightRange: Range(min: 15, max: 27),
+      pictureURL: ProjectImageUrl.huskyImageUrl,
+      detail:
+          'The Siberian Husky is a strong, intelligent, resilient and noble dog. It is called Siberian Husky, Siberian Husky and Arctic Husky. It has taken place in people\'s lives with its fun-loving and adventurous and sometimes mischievous nature. It is known as a working sled dog with medium size, strength, speed and endurance. It has a fur structure that protects it in very cold weather. They carry light loads, packages at medium speed on frozen areas, on glaciers. Although he usually has a sharp facial expression, the Siberian Husky is a friendly, affectionate, caring dog that gets along well with everyone.',
+    )
   ];
 }

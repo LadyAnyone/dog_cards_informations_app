@@ -14,13 +14,12 @@ class DogsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     String mainTitle = 'Dogs Card';
     return MaterialApp(
-      //metarial app projede bir tane olur
-      title: (mainTitle), //uygulamayı arkaya aldığında bu gözükür
+      title: (mainTitle),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
               indicatorColor: Colors.black, //kontrol et
-              primarySwatch: Colors.blue,
-              backgroundColor: Colors.purple)
+              primarySwatch: Colors.deepPurple,
+              backgroundColor: Colors.deepPurple)
           .copyWith(
         appBarTheme: const AppBarTheme(
           centerTitle: true,
@@ -38,12 +37,7 @@ class DogsCard extends StatelessWidget {
 // ondan sonra kullanıcı tekrardan uygulamaya girdiği zaman, uygulama landing page'demi yoksa homeview'dam mi başlayacak 
 // ona karar vereceğiz
 
-
-
 // yapının nasıl gözüktüğünü (padding, ekrandaki yer,) gibi özellikler dışarıdan belirlenmeli
-
-
-
 
 // ADVANCED Köpek detayını gidilirken Hero Widget'ı kullanılacak 
 
