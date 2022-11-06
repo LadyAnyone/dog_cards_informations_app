@@ -1,6 +1,6 @@
 import 'package:dog_cards_informations_app/core/const/padding.dart';
 import 'package:dog_cards_informations_app/product/dog_card.dart';
-import 'package:dog_cards_informations_app/product/dogs.dart';
+import 'package:dog_cards_informations_app/product/dogs_constants.dart';
 
 import 'package:flutter/material.dart';
 import '../core/const/string.dart';

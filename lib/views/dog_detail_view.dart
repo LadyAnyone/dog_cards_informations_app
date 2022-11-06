@@ -27,6 +27,8 @@ class _DogDetailViewState extends State<DogDetailView> {
         ),
       ),
       body: Column(
+        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //crossAxisAlignment: CrossAxisAlignment.baseline,
         children: [
           Padding(
             padding: ProjectPadding.projectMediumAllPadding,
@@ -35,21 +37,40 @@ class _DogDetailViewState extends State<DogDetailView> {
               style: Theme.of(context).textTheme.labelLarge,
             ),
           ),
-          Text(
-            'Origin:  ${widget.dog.originCountry}',
-            style: Theme.of(context).textTheme.bodyLarge,
+          DogInformationText(
+            information: 'Origin:${widget.dog.originCountry} ',
           ),
-          Text(
-              'Height: ${widget.dog.heightRange.min.toString()} - ${widget.dog.heightRange.max.toString()}',
-              style: Theme.of(context).textTheme.bodyLarge),
-          Text(
-              'Life: ${widget.dog.lifeTimeRange.min.toString()} - ${widget.dog.lifeTimeRange.max.toString()}',
-              style: Theme.of(context).textTheme.bodyLarge),
-          Text(
-              'Weight: ${widget.dog.weightRange.min.toString()} - ${widget.dog.weightRange.max.toString()}',
-              style: Theme.of(context).textTheme.bodyLarge),
+          DogInformationText(
+            information:
+                'Height: ${widget.dog.heightRange.min.toString()} - ${widget.dog.heightRange.max.toString()}',
+          ),
+          DogInformationText(
+            information:
+                'Life: ${widget.dog.lifeTimeRange.min.toString()} - ${widget.dog.lifeTimeRange.max.toString()}',
+          ),
+          DogInformationText(
+            information:
+                'Weight: ${widget.dog.weightRange.min.toString()} - ${widget.dog.weightRange.max.toString()}',
+          ),
         ],
       ),
+    );
+  }
+}
+
+class DogInformationText extends StatelessWidget {
+  const DogInformationText({
+    Key? key,
+    required this.information,
+  }) : super(key: key);
+
+  final String information;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      information,
+      style: Theme.of(context).textTheme.bodyLarge,
     );
   }
 }

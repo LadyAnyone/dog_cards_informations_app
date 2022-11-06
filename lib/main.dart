@@ -1,3 +1,4 @@
+import 'package:dog_cards_informations_app/core/const/string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -12,9 +13,8 @@ class DogsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String mainTitle = 'Dogs Card';
     return MaterialApp(
-      title: (mainTitle),
+      title: ProjectStrings.title,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
               indicatorColor: Colors.black, //kontrol et

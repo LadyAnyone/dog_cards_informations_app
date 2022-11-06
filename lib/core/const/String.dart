@@ -7,4 +7,5 @@ class ProjectStrings {
       'Continue to learn about dog breeds now.';
   static String landingElevatedButtonText = 'Keep going!';
   static String dogCardDetailButton = 'Detail';
+  
 }
